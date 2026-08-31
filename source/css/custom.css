@@ -4,3 +4,9 @@
 #mobile-grid-menu a[href^="https://github.com/"] span {
   display: none;
 }
+
+/* GitHub 图标来自另一套 iconfont（社交图标集），字形天生比主题内置图标小约 22%，
+   放大 16px → 20.5px（约 1.28 倍）使视觉大小与相邻图标一致 */
+.icon-github-fill {
+  font-size: 20.5px;
+}
