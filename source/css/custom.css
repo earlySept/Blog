@@ -1,0 +1,6 @@
+/* 自定义样式：覆盖主题默认外观 */
+/* 导航栏 GitHub 菜单项只显示图标、隐藏文字（桌面端菜单 + 移动端网格菜单） */
+#navbar .nav-link[href^="https://github.com/"] > span,
+#mobile-grid-menu a[href^="https://github.com/"] span {
+  display: none;
+}

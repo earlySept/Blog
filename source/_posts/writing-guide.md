@@ -41,6 +41,34 @@ tags:
 2. **本地预览**（可选）：`npm run server`，浏览器打开 http://localhost:4000
 3. **发布上线**：`npm run pub`，推送后约 1 分钟线上更新
 
+## 在文章里放 GitHub 工程链接
+
+写技术文章经常要附上开源工程，有三种常用写法（都直接写在 Markdown 正文里）：
+
+**1. 普通链接**（最简单）
+
+```markdown
+完整工程在 GitHub：[earlySept/Blog](https://github.com/earlySept/Blog)
+```
+
+**2. 徽章式链接**（带 GitHub 图标的小徽章，点击跳转仓库）
+
+```markdown
+[![GitHub Repo](https://img.shields.io/badge/GitHub-earlySept/Blog-181717?logo=github)](https://github.com/earlySept/Blog)
+```
+
+效果：[![GitHub Repo](https://img.shields.io/badge/GitHub-earlySept/Blog-181717?logo=github)](https://github.com/earlySept/Blog)
+
+**3. 仓库卡片**（自动展示仓库简介、star 数，适合放在文章开头）
+
+```markdown
+[![Repo Card](https://github-readme-stats.vercel.app/api/pin/?username=earlySept&repo=Blog&theme=default)](https://github.com/earlySept/Blog)
+```
+
+效果：[![Repo Card](https://github-readme-stats.vercel.app/api/pin/?username=earlySept&repo=Blog&theme=default)](https://github.com/earlySept/Blog)
+
+> 把链接里的 `earlySept/Blog` 换成你自己的仓库就行。徽章样式还能加 star 数：在 shields.io 链接里接 `https://img.shields.io/github/stars/earlySept/Blog`。
+
 ## 几个小提示
 
 - **文件名建议用英文**（如 `my-first-post.md`），因为文件名会出现在网址里；标题随便用中文
