@@ -8,12 +8,13 @@ title: 我的博客
 subtitle: 记录与分享
 description: 我的个人博客
 keywords: 博客
-author: moorgen
+author: earlySept
 language: zh-CN
 timezone: Asia/Shanghai
 
-# ---------- 网址（发布到 GitHub Pages 时会自动更新为你的地址） ----------
-url: https://example.github.io
+# ---------- 网址（部署在 earlySept/Blog 仓库的 GitHub Pages 上） ----------
+url: https://earlySept.github.io/Blog
+root: /Blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
