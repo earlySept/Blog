@@ -1,0 +1,29 @@
+{
+  "name": "my-blog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "我的个人博客（Hexo + GitHub Pages，只需写 Markdown）",
+  "scripts": {
+    "new": "hexo new",
+    "server": "hexo server",
+    "build": "hexo generate",
+    "pub": "node tools/publish.mjs"
+  },
+  "dependencies": {
+    "hexo": "^7.3.0",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-index": "^4.0.0",
+    "hexo-generator-searchdb": "^1.5.0",
+    "hexo-generator-tag": "^2.0.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-less": "^2.0.2",
+    "hexo-renderer-marked": "^6.3.0",
+    "hexo-renderer-stylus": "^3.0.1",
+    "hexo-server": "^3.0.0",
+    "hexo-theme-fluid": "^1.9.0"
+  },
+  "hexo": {
+    "version": "7.3.0"
+  }
+}
