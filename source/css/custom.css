@@ -6,11 +6,43 @@
   display: none;
 }
 
-/* GitHub 和 Projects 菜单的图标来自另一套图标字体，字形天生比主题图标小约 22%。
-   放大到 20.5px（实测校准值）后与导航栏其他图标视觉等大。
+/* 桌面导航使用居中对齐，避免不同 iconfont 字形按字体基线排列后上下错位。 */
+@media (min-width: 992px) {
+  #navbar .navbar-nav {
+    align-items: center;
+  }
+
+  #navbar .navbar-nav .nav-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.22rem;
+    line-height: 1;
+  }
+
+  #navbar .navbar-nav .nav-link > i.iconfont {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    flex: 0 0 auto;
+    line-height: 1 !important;
+  }
+
+  #navbar .navbar-nav .nav-link > span {
+    line-height: 1;
+  }
+}
+
+/* GitHub 图标只显示图形，稍微放大后和旁边的纯图标按钮视觉更接近。
    !important 用于确保这条规则稳定生效、不被主题样式覆盖。
    以后如果新增菜单项的图标也偏小，把它的 class 加到下面选择器里即可。 */
-.icon-github-fill,
+.icon-github-fill {
+  font-size: 18px !important;
+}
+
+/* Projects 的 </> 字形本身偏大，单独收小到和 Home/Blog/About 接近。 */
 .icon-code {
-  font-size: 20.5px !important;
+  font-size: 1rem !important;
 }
