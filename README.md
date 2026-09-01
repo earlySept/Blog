@@ -50,6 +50,7 @@ blog/
 
 - **线上没更新？** 打开仓库的 Actions 页看构建是否完成，完成后等 1 分钟再刷新（浏览器缓存可按 Ctrl+F5 强制刷新）。
 - **改了 `source/css/custom.css`，页面样式没变？** 浏览器会把 CSS 缓存最多 10 分钟。改完样式后到 `_config.fluid.yml` 的 `custom_css:` 把 `?v=` 后面的数字加一（如 `?v=2` 改 `?v=3`），访客浏览器会当成新文件立刻重新下载；本地预览则按 Ctrl+F5 强刷即可。
+- **别用 VSCode 内置的 Simple Browser 预览本站！** 它的缓存非常顽固，刷新经常不重新拉取资源，会出现「代码改了但页面怎么都不变」的假象。本地预览请用 Edge/Chrome 等真正的浏览器打开 http://localhost:4000/Blog/ 。
 - **改了配置或 `scripts/` 下的文件，本地预览没变化？** 这两类文件只在服务器启动时加载，`Ctrl+C` 停止后重新 `npm run server`（文章和样式文件则会自动热更新）。
 - **本地预览异常？** `Ctrl+C` 停止后重新 `npm run server`。
 - **`npm run pub` 报错？** 多半是网络问题，重试一次；首次使用需要先 `gh auth login` 登录 GitHub。
