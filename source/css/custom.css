@@ -6,10 +6,11 @@
   display: none;
 }
 
-/* GitHub 图标来自另一套图标字体，字形天生比主题图标小约 22%。
+/* GitHub 和 Projects 菜单的图标来自另一套图标字体，字形天生比主题图标小约 22%。
    放大到 20.5px（实测校准值）后与导航栏其他图标视觉等大。
    !important 用于确保这条规则稳定生效、不被主题样式覆盖。
-   想再大/小一点，只改这一个数字即可。 */
-.icon-github-fill {
+   以后如果新增菜单项的图标也偏小，把它的 class 加到下面选择器里即可。 */
+.icon-github-fill,
+.icon-code {
   font-size: 20.5px !important;
 }

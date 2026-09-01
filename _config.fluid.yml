@@ -239,7 +239,7 @@ custom_js:
 # The usage is the same as custom_js
 # 注意：每次修改 custom.css 后，把下面的 ?v= 数字加一，访客浏览器才会立刻拿到新样式（否则最多缓存 10 分钟）
 custom_css:
-  - /css/custom.css?v=4
+  - /css/custom.css?v=5
 
 # 网页访问统计
 # Analysis of website visitors
@@ -382,13 +382,14 @@ navbar:
 
   # 导航栏菜单，可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
   # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
+  # 菜单结构：Home / Blog / Projects / About / GitHub（图标）
+  # Home=首页  Blog=全部文章归档页  Projects=项目页  GitHub=外链仅图标
   menu:
-    - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
-    - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
-    - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
-    - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
+    - { key: "home", link: "/", icon: "iconfont icon-home-fill", name: "Home" }
+    - { key: "archive", link: "/archives/", icon: "iconfont icon-articles", name: "Blog" }
+    - { key: "projects", link: "/projects/", icon: "iconfont icon-code", name: "Projects" }
+    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill", name: "About" }
     - { key: "github", link: "https://github.com/earlySept", icon: "iconfont icon-github-fill", name: "GitHub", target: "_blank" }
-    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
