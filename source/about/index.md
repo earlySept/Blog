@@ -2,6 +2,10 @@
 layout: about
 ---
 
-这里写一段自我介绍，支持全部 Markdown 语法。
+Hi，我是 earlySept。
 
-（头像、名字、社交图标在项目根目录 `_config.fluid.yml` 的 `about:` 部分修改。）
+一名工程师，这里是我的个人网站：记录技术学习和踩坑笔记，也放一些自己折腾的项目。
+
+- 文章都在 [Blog](/Blog/archives/)
+- 项目列表见 [Projects](/Blog/projects/)
+- 代码在 [GitHub](https://github.com/earlySept)
