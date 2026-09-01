@@ -239,7 +239,7 @@ custom_js:
 # The usage is the same as custom_js
 # 注意：每次修改 custom.css 后，把下面的 ?v= 数字加一，访客浏览器才会立刻拿到新样式（否则最多缓存 10 分钟）
 custom_css:
-  - /css/custom.css?v=3
+  - /css/custom.css?v=4
 
 # 网页访问统计
 # Analysis of website visitors

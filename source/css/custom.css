@@ -1,12 +1,15 @@
-/* 自定义样式：覆盖主题默认外观 */
-/* 导航栏 GitHub 菜单项只显示图标、隐藏文字（桌面端菜单 + 移动端网格菜单） */
+/* 自定义样式：所有针对主题外观的微调都写在这个文件里 */
+
+/* 导航栏 GitHub 项只显示图标、隐藏文字（桌面菜单 + 移动端菜单） */
 #navbar .nav-link[href^="https://github.com/"] > span,
 #mobile-grid-menu a[href^="https://github.com/"] span {
   display: none;
 }
 
-/* GitHub 图标来自另一套 iconfont（社交图标集），字形天生比主题内置图标小约 22%，
-   手动放大补偿。与相邻图标严格等大的校准值是 20.5px，当前 28px 为个人偏好（偏大） */
+/* GitHub 图标来自另一套图标字体，字形天生比主题图标小约 22%。
+   放大到 20.5px（实测校准值）后与导航栏其他图标视觉等大。
+   !important 用于确保这条规则稳定生效、不被主题样式覆盖。
+   想再大/小一点，只改这一个数字即可。 */
 .icon-github-fill {
-  font-size: 28px;
+  font-size: 20.5px !important;
 }
