@@ -1,6 +1,7 @@
 ---
 title: 写作指南 —— 只管写 Markdown 就好
 date: 2026-08-31 10:01:00
+excerpt: 这篇文章整理博客的日常写作流程：新建、预览、发布，以及 Markdown 文件的基本写法。
 tags: [指南]
 categories: [开始]
 ---
@@ -38,7 +39,7 @@ tags:
 ## 日常三步
 
 1. **新建文章**：`npm run new "我的新文章"`（也可以直接复制一篇旧的 .md 改）
-2. **本地预览**（可选）：`npm run server`，浏览器打开 http://localhost:4000
+2. **本地预览**（可选）：`npm run server`，浏览器打开 http://localhost:4000/Blog/
 3. **发布上线**：`npm run pub`，推送后约 1 分钟线上更新
 
 ## 在文章里放 GitHub 工程链接

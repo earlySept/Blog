@@ -239,7 +239,7 @@ custom_js:
 # The usage is the same as custom_js
 # 注意：每次修改 custom.css 后，把下面的 ?v= 数字加一，访客浏览器才会立刻拿到新样式（否则最多缓存 10 分钟）
 custom_css:
-  - /css/custom.css?v=8
+  - /css/custom.css?v=11
 
 # 网页访问统计
 # Analysis of website visitors
@@ -385,10 +385,10 @@ navbar:
   # 菜单结构：Home / Blog / Projects / About / GitHub（图标）
   # Home=首页  Blog=全部文章归档页  Projects=项目页  GitHub=外链仅图标
   menu:
-    - { key: "home", link: "/", icon: "iconfont icon-home-fill", name: "Home" }
-    - { key: "archive", link: "/archives/", icon: "iconfont icon-articles", name: "Blog" }
-    - { key: "projects", link: "/projects/", icon: "iconfont icon-code", name: "Projects" }
-    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill", name: "About" }
+    - { key: "home", link: "/", name: "Home" }
+    - { key: "archive", link: "/archives/", name: "Blog" }
+    - { key: "projects", link: "/projects/", name: "Projects" }
+    - { key: "about", link: "/about/", name: "About" }
     - { key: "github", link: "https://github.com/earlySept", icon: "iconfont icon-github-fill", name: "GitHub", target: "_blank" }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
@@ -601,7 +601,7 @@ post:
       # 格式参照 ISO-8601 日期格式化
       # ISO-8601 date format
       # See: http://momentjs.cn/docs/#/parsing/string-format/
-      format: "LL a"
+      format: "YYYY年M月D日 HH:mm"
 
     # 字数统计
     # Word count

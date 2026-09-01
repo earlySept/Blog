@@ -12,6 +12,11 @@
     align-items: center;
   }
 
+  #navbar .navbar-nav .nav-item {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+
   #navbar .navbar-nav .nav-link {
     display: inline-flex;
     align-items: center;
@@ -43,11 +48,6 @@
 /* GitHub 图标只显示图形，稍微放大后和旁边的纯图标按钮视觉更接近。
    !important 用于确保这条规则稳定生效、不被主题样式覆盖。
    以后如果新增菜单项的图标也偏小，把它的 class 加到下面选择器里即可。 */
-.icon-github-fill {
+#navbar .navbar-nav .nav-link > i.icon-github-fill {
   font-size: 18px !important;
-}
-
-/* Projects 的 </> 字形本身偏大，单独收小到和 Home/Blog/About 接近。 */
-.icon-code {
-  font-size: 1rem !important;
 }
