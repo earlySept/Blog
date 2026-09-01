@@ -2,13 +2,18 @@
 
 基于 **Hexo + Fluid 主题 + GitHub Pages** 的个人博客。日常只需要写 Markdown 文件，网页由 GitHub 自动构建发布。
 
+## 项目链接
+
+- 线上博客：[https://earlysept.github.io/Blog/](https://earlysept.github.io/Blog/)
+- GitHub 仓库：[https://github.com/earlySept/Blog](https://github.com/earlySept/Blog)
+
 ## 日常写作（只需三步）
 
 ```bash
 # 1. 新建文章（在 source/_posts/ 下生成 .md 文件）
 npm run new "文章标题"
 
-# 2. 本地预览（可选）：浏览器打开 http://localhost:4000
+# 2. 本地预览（可选）：浏览器打开 http://localhost:4000/Blog/
 npm run server
 
 # 3. 发布上线：推送到 GitHub，约 1 分钟后线上更新
@@ -25,7 +30,7 @@ blog/
 │   ├── _posts/        ★ 所有博客文章（.md）
 │   ├── about/index.md ★ 「关于」页
 │   ├── css/custom.css ★ 自定义样式（如导航栏 GitHub 只显示图标）
-│   └── img/           ★ 文章图片（自建）
+│   └── img/           ★ 图片资源（文章图片、首页背景等）
 ├── scripts/           自定义 Hexo 脚本（按北京时间自动切换明暗模式）
 ├── _config.yml        站点配置（标题、作者等）
 ├── _config.fluid.yml  主题配置（外观、导航、关于页）
