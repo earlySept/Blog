@@ -1,0 +1,40 @@
+<%
+var question = page.question
+page.title = question.title
+page.subtitle = question.statusLabel
+page.banner_img = page.banner_img || theme.page.banner_img
+page.banner_img_height = page.banner_img_height || theme.page.banner_img_height
+page.banner_mask_alpha = page.banner_mask_alpha || theme.page.banner_mask_alpha
+%>
+
+<article class="page-content question-page">
+  <header class="question-header">
+    <h1><%= question.title %></h1>
+    <div class="question-detail-meta">
+      <span class="question-status question-status-<%= question.status %>"><%= question.statusLabel %></span>
+      <span aria-hidden="true">·</span>
+      <time datetime="<%= full_date(question.date, 'YYYY-MM-DD') %>"><%= date(question.date, 'YYYY-MM-DD') %></time>
+    </div>
+    <% if (question.tags.length > 0) { %>
+      <div class="question-detail-tags">
+        <% question.tags.forEach(function(tag) { %>
+          <span><%= tag %></span>
+        <% }) %>
+      </div>
+    <% } %>
+  </header>
+
+  <div class="markdown-body question-body">
+    <%- question.renderedContent %>
+  </div>
+
+  <% if (question.status === 'answered' && question.articleInfo) { %>
+    <aside class="question-article-link">
+      <p>Answered :</p>
+      <a href="<%= url_for(question.articleInfo.path) %>">《<%= question.articleInfo.title %>》</a>
+      <a class="question-read-link" href="<%= url_for(question.articleInfo.path) %>">→ 阅读文章</a>
+    </aside>
+  <% } %>
+</article>
+
+<%- partial('_partials/markdown-plugins') %>

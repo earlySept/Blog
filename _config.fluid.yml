@@ -239,7 +239,7 @@ custom_js:
 # The usage is the same as custom_js
 # 注意：每次修改 custom.css 后，把下面的 ?v= 数字加一，访客浏览器才会立刻拿到新样式（否则最多缓存 10 分钟）
 custom_css:
-  - /css/custom.css?v=11
+  - /css/custom.css?v=14
 
 # 网页访问统计
 # Analysis of website visitors
@@ -388,6 +388,7 @@ navbar:
     - { key: "home", link: "/", name: "Home" }
     - { key: "archive", link: "/archives/", name: "Blog" }
     - { key: "projects", link: "/projects/", name: "Projects" }
+    - { key: "thoughts", link: "/questions/", name: "Thoughts" }
     - { key: "about", link: "/about/", name: "About" }
     - { key: "github", link: "https://github.com/earlySept", icon: "iconfont icon-github-fill", name: "GitHub", target: "_blank" }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }

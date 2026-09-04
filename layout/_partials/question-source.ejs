@@ -1,0 +1,12 @@
+<%
+var sourceQuestions = related_questions(page)
+%>
+<% if (sourceQuestions.length > 0) { %>
+  <aside class="post-question-source">
+    <p>这篇文章源于我之前记录的一个问题</p>
+    <% sourceQuestions.forEach(function(question) { %>
+      <a href="<%= url_for(question.path) %>">“<%= question.title %>”</a>
+    <% }) %>
+    <a class="post-question-source-link" href="<%= url_for(sourceQuestions[0].path) %>">→ 查看这个问题</a>
+  </aside>
+<% } %>

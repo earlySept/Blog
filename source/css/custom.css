@@ -51,3 +51,187 @@
 #navbar .navbar-nav .nav-link > i.icon-github-fill {
   font-size: 18px !important;
 }
+
+/* Thoughts / Questions：克制地补一层知识沉淀入口，尽量贴合 Fluid 原本的留白与文字气质。 */
+.home-thoughts {
+  width: 100%;
+  max-width: 820px;
+  margin: 2.35rem auto 0;
+  padding: 0 0.25rem;
+}
+
+.home-thoughts-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.home-thoughts h2 {
+  margin: 0;
+  color: var(--text-color, #34495e);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.home-thoughts-list,
+.question-list {
+  margin-top: 0.65rem;
+  border-top: 1px solid rgba(127, 127, 127, 0.18);
+}
+
+.home-thought-item,
+.question-list-item {
+  display: block;
+  padding: 0.68rem 0;
+  border-bottom: 1px solid rgba(127, 127, 127, 0.18);
+  color: inherit;
+  text-decoration: none !important;
+  transition: color 0.16s ease, transform 0.16s ease;
+}
+
+.home-thought-item:hover,
+.question-list-item:hover {
+  color: var(--link-hover-color, #2f80ed);
+  transform: translateX(2px);
+}
+
+.home-thought-title,
+.question-list-title {
+  display: block;
+  color: inherit;
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.home-thought-meta,
+.question-list-meta,
+.question-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.28rem;
+  color: var(--sec-text-color, #6c757d);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.question-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.55rem;
+}
+
+.question-detail-tags span {
+  color: var(--sec-text-color, #6c757d);
+  font-size: 0.82rem;
+}
+
+.question-detail-tags span::before {
+  content: "#";
+  color: rgba(127, 127, 127, 0.65);
+}
+
+.home-thoughts-more,
+.question-read-link,
+.post-question-source-link {
+  display: inline-block;
+  font-size: 0.95rem;
+}
+
+.home-thoughts-more {
+  margin-top: 0;
+  white-space: nowrap;
+  color: var(--sec-text-color, #6c757d);
+}
+
+.question-status {
+  font-weight: 600;
+}
+
+.question-status-thinking {
+  color: #6b7280;
+}
+
+.question-status-researching {
+  color: #4b6f9f;
+}
+
+.question-status-answered {
+  color: #4f7d5f;
+}
+
+.questions-header,
+.question-header {
+  margin-bottom: 2rem;
+}
+
+.questions-header h1,
+.question-header h1 {
+  margin-bottom: 0.75rem;
+}
+
+.questions-header p,
+.questions-empty,
+.questions-group-empty {
+  color: var(--sec-text-color, #6c757d);
+}
+
+.questions-group {
+  margin-top: 2.4rem;
+}
+
+.questions-group h2 {
+  margin-bottom: 0.4rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid rgba(127, 127, 127, 0.18);
+  font-size: 1.25rem;
+}
+
+.question-body {
+  margin-top: 1.8rem;
+}
+
+.question-article-link,
+.post-question-source {
+  margin: 1.8rem 0;
+  padding: 1rem 1.1rem;
+  border-left: 3px solid rgba(79, 125, 95, 0.55);
+  background: rgba(127, 127, 127, 0.06);
+}
+
+.question-article-link p,
+.post-question-source p {
+  margin: 0 0 0.45rem;
+  color: var(--sec-text-color, #6c757d);
+}
+
+.question-article-link a,
+.post-question-source a {
+  display: block;
+}
+
+@media (max-width: 767.98px) {
+  .home-thoughts {
+    margin-top: 1.8rem;
+    padding: 0;
+  }
+
+  .home-thoughts h2 {
+    font-size: 1rem;
+  }
+
+  .home-thought-item,
+  .question-list-item {
+    padding: 0.7rem 0;
+  }
+
+  .question-article-link,
+  .post-question-source {
+    padding: 0.9rem 1rem;
+  }
+}

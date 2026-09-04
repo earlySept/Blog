@@ -1,0 +1,45 @@
+<%
+page.title = page.title || 'Thoughts'
+page.subtitle = page.subtitle || '问题、想法、随笔，以及暂时还没写成文章的东西。'
+page.banner_img = page.banner_img || theme.page.banner_img
+page.banner_img_height = page.banner_img_height || theme.page.banner_img_height
+page.banner_mask_alpha = page.banner_mask_alpha || theme.page.banner_mask_alpha
+var statusOrder = ['thinking', 'researching', 'answered']
+var groups = page.groups || questions_by_status(page.questions)
+%>
+
+<article class="page-content questions-page">
+  <header class="questions-header">
+    <h1>Thoughts</h1>
+    <p>问题、想法、随笔，以及暂时还没写成文章的东西。</p>
+  </header>
+
+  <% if (!page.questions || page.questions.length === 0) { %>
+    <p class="questions-empty">还没有记录问题。</p>
+  <% } %>
+
+  <% statusOrder.forEach(function(status) { %>
+    <% var items = groups[status] || [] %>
+    <section class="questions-group" aria-labelledby="questions-<%= status %>">
+      <h2 id="questions-<%= status %>"><%= question_status_label(status) %></h2>
+      <% if (items.length === 0) { %>
+        <p class="questions-group-empty">暂无。</p>
+      <% } else { %>
+        <div class="question-list">
+          <% items.forEach(function(question) { %>
+            <a class="question-list-item" href="<%= url_for(question.path) %>">
+              <span class="question-list-title"><%= question.title %></span>
+              <span class="question-list-meta">
+                <time datetime="<%= full_date(question.date, 'YYYY-MM-DD') %>"><%= date(question.date, 'YYYY-MM-DD') %></time>
+                <% if (question.tags.length > 0) { %>
+                  <span aria-hidden="true">·</span>
+                  <span><%= question.tags.join(' · ') %></span>
+                <% } %>
+              </span>
+            </a>
+          <% }) %>
+        </div>
+      <% } %>
+    </section>
+  <% }) %>
+</article>

@@ -44,6 +44,15 @@ relative_link: false
 future: true
 syntax_highlighter: highlight.js
 
+# ---------- 首页显示数量 ----------
+# 首页文章列表显示几篇。超过后会自动分页。
+index_generator:
+  per_page: 5
+
+# 首页底部「最近想法」显示几条。
+thoughts:
+  home_limit: 3
+
 # ---------- 默认分类（不用动） ----------
 default_category: 未分类
 
